@@ -1,0 +1,17 @@
+/out/
+/target/
+*/target/**
+**/META-INF/
+/.idea/
+/logs/
+.classpath
+.project
+.settings/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
