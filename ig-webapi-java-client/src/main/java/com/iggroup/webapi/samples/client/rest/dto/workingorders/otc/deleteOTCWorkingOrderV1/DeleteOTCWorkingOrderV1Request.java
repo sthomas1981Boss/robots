@@ -1,6 +1,5 @@
 package com.iggroup.webapi.samples.client.rest.dto.workingorders.otc.deleteOTCWorkingOrderV1;
 
-import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /*

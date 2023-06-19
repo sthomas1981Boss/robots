@@ -8,11 +8,16 @@ List watchlists response
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GetWatchlistsV1Response {
 
-/*
-List of watchlists
-*/
-private java.util.List<WatchlistsItem> watchlists;
+    /*
+    List of watchlists
+    */
+    private java.util.List<WatchlistsItem> watchlists;
 
-public java.util.List<WatchlistsItem> getWatchlists() { return watchlists; }
-public void setWatchlists(java.util.List<WatchlistsItem> watchlists) { this.watchlists=watchlists; }
+    public java.util.List<WatchlistsItem> getWatchlists() {
+        return watchlists;
+    }
+
+    public void setWatchlists(java.util.List<WatchlistsItem> watchlists) {
+        this.watchlists = watchlists;
+    }
 }

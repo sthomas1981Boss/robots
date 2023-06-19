@@ -8,11 +8,16 @@ List of transactions
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GetTransactionHistoryByTimeRangeV1Response {
 
-/*
-List of transactions
-*/
-private java.util.List<TransactionsItem> transactions;
+    /*
+    List of transactions
+    */
+    private java.util.List<TransactionsItem> transactions;
 
-public java.util.List<TransactionsItem> getTransactions() { return transactions; }
-public void setTransactions(java.util.List<TransactionsItem> transactions) { this.transactions=transactions; }
+    public java.util.List<TransactionsItem> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(java.util.List<TransactionsItem> transactions) {
+        this.transactions = transactions;
+    }
 }

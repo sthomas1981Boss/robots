@@ -7,22 +7,22 @@ import java.net.URI;
 
 public class HttpDeleteWithBody extends HttpEntityEnclosingRequestBase {
 
-	public HttpDeleteWithBody(String uri) {
-		super();
-		setURI(URI.create(uri));
-	}
+    public HttpDeleteWithBody(String uri) {
+        super();
+        setURI(URI.create(uri));
+    }
 
-	public HttpDeleteWithBody(URI uri) {
-		super();
-		setURI(uri);
-	}
+    public HttpDeleteWithBody(URI uri) {
+        super();
+        setURI(uri);
+    }
 
-	public HttpDeleteWithBody() {
-		super();
-	}
+    public HttpDeleteWithBody() {
+        super();
+    }
 
-	@Override
-	public String getMethod() {
-		return "POST";			// POST with _method=DELETE header
-	}
+    @Override
+    public String getMethod() {
+        return "POST";            // POST with _method=DELETE header
+    }
 }

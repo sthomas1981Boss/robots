@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com" />
+        <module name="backtest" />
+        <module name="ig-webapi-java-sample-console" />
+        <module name="ig-webapi-java-client" />
+        <module name="robot-dtosc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backtest" target="1.8" />
+      <module name="com" target="1.8" />
+      <module name="ig-webapi-java-client" target="1.8" />
+      <module name="ig-webapi-java-sample-console" target="1.8" />
+      <module name="lib" target="1.8" />
+      <module name="robot" target="1.8" />
+      <module name="robot-dtosc" target="1.8" />
+      <module name="robots" target="1.8" />
+      <module name="ta4j-charting-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.lightstreamer:sdk.client.java.se:6.0.2.20160510">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/lightstreamer/sdk.client.java.se/6.0.2.20160510/sdk.client.java.se-6.0.2.20160510.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/lightstreamer/sdk.client.java.se/6.0.2.20160510/sdk.client.java.se-6.0.2.20160510-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/lightstreamer/sdk.client.java.se/6.0.2.20160510/sdk.client.java.se-6.0.2.20160510-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

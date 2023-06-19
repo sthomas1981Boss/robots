@@ -1,6 +1,5 @@
 package com.iggroup.webapi.samples.client.rest.dto.markets.getMarketDetailsV1;
 
-import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /*
@@ -9,46 +8,81 @@ Currency
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrenciesItem {
 
-/*
-Code
-*/
-private String code;
+    /*
+    Code
+    */
+    private String code;
 
-/*
-Name
-*/
-private String name;
+    /*
+    Name
+    */
+    private String name;
 
-/*
-Symbol
-*/
-private String symbol;
+    /*
+    Symbol
+    */
+    private String symbol;
 
-/*
-Base exchange rate
-*/
-private Float baseExchangeRate;
+    /*
+    Base exchange rate
+    */
+    private Float baseExchangeRate;
 
-/*
-Exchange rate
-*/
-private Float exchangeRate;
+    /*
+    Exchange rate
+    */
+    private Float exchangeRate;
 
-/*
-True if this is the default currency
-*/
-private Boolean isDefault;
+    /*
+    True if this is the default currency
+    */
+    private Boolean isDefault;
 
-public String getCode() { return code; }
-public void setCode(String code) { this.code=code; }
-public String getName() { return name; }
-public void setName(String name) { this.name=name; }
-public String getSymbol() { return symbol; }
-public void setSymbol(String symbol) { this.symbol=symbol; }
-public Float getBaseExchangeRate() { return baseExchangeRate; }
-public void setBaseExchangeRate(Float baseExchangeRate) { this.baseExchangeRate=baseExchangeRate; }
-public Float getExchangeRate() { return exchangeRate; }
-public void setExchangeRate(Float exchangeRate) { this.exchangeRate=exchangeRate; }
-public Boolean getIsDefault() { return isDefault; }
-public void setIsDefault(Boolean isDefault) { this.isDefault=isDefault; }
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public Float getBaseExchangeRate() {
+        return baseExchangeRate;
+    }
+
+    public void setBaseExchangeRate(Float baseExchangeRate) {
+        this.baseExchangeRate = baseExchangeRate;
+    }
+
+    public Float getExchangeRate() {
+        return exchangeRate;
+    }
+
+    public void setExchangeRate(Float exchangeRate) {
+        this.exchangeRate = exchangeRate;
+    }
+
+    public Boolean getIsDefault() {
+        return isDefault;
+    }
+
+    public void setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+    }
 }

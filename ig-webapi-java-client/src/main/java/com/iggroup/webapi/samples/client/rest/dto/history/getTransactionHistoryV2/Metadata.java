@@ -8,18 +8,29 @@ Paging metadata
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Metadata {
 
-/*
-Size
-*/
-private int size;
+    /*
+    Size
+    */
+    private int size;
 
-/*
-Page data
-*/
-private PageData pageData;
+    /*
+    Page data
+    */
+    private PageData pageData;
 
-public int getSize() { return size; }
-public void setSize(int size) { this.size=size; }
-public PageData getPageData() { return pageData; }
-public void setPageData(PageData pageData) { this.pageData=pageData; }
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public PageData getPageData() {
+        return pageData;
+    }
+
+    public void setPageData(PageData pageData) {
+        this.pageData = pageData;
+    }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backtest.iml" filepath="$PROJECT_DIR$/backtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.iml" filepath="$PROJECT_DIR$/com.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ig-webapi-java-client/ig-webapi-java-client.iml" filepath="$PROJECT_DIR$/ig-webapi-java-client/ig-webapi-java-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ig-webapi-java-sample-console/ig-webapi-java-sample-console.iml" filepath="$PROJECT_DIR$/ig-webapi-java-sample-console/ig-webapi-java-sample-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot-dtosc/robot-dtosc.iml" filepath="$PROJECT_DIR$/robot-dtosc/robot-dtosc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/robots.iml" filepath="$PROJECT_DIR$/.idea/robots.iml" />
+    </modules>
+  </component>
+</project>

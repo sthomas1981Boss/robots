@@ -1,7 +1,8 @@
 package com.iggroup.webapi.samples.client.rest.dto.positions.sprintmarkets.createSprintMarketPositionV1;
 
-import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.math.BigDecimal;
 
 /*
 Create sprint market position request.
@@ -12,39 +13,68 @@ Create sprint market position request.
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateSprintMarketPositionV1Request {
 
-/*
-A user-defined reference identifying the submission of the order
-*/
-private String dealReference;
+    /*
+    A user-defined reference identifying the submission of the order
+    */
+    private String dealReference;
 
-/*
-Instrument epic identifier
-*/
-private String epic;
+    /*
+    Instrument epic identifier
+    */
+    private String epic;
 
-/*
-Deal direction
-*/
-private Direction direction;
+    /*
+    Deal direction
+    */
+    private Direction direction;
 
-/*
-Deal size
-*/
-private BigDecimal size;
+    /*
+    Deal size
+    */
+    private BigDecimal size;
 
-/*
-Expiry period
-*/
-private ExpiryPeriod expiryPeriod;
+    /*
+    Expiry period
+    */
+    private ExpiryPeriod expiryPeriod;
 
-public String getDealReference() { return dealReference; }
-public void setDealReference(String dealReference) { this.dealReference=dealReference; }
-public String getEpic() { return epic; }
-public void setEpic(String epic) { this.epic=epic; }
-public Direction getDirection() { return direction; }
-public void setDirection(Direction direction) { this.direction=direction; }
-public BigDecimal getSize() { return size; }
-public void setSize(BigDecimal size) { this.size=size; }
-public ExpiryPeriod getExpiryPeriod() { return expiryPeriod; }
-public void setExpiryPeriod(ExpiryPeriod expiryPeriod) { this.expiryPeriod=expiryPeriod; }
+    public String getDealReference() {
+        return dealReference;
+    }
+
+    public void setDealReference(String dealReference) {
+        this.dealReference = dealReference;
+    }
+
+    public String getEpic() {
+        return epic;
+    }
+
+    public void setEpic(String epic) {
+        this.epic = epic;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public BigDecimal getSize() {
+        return size;
+    }
+
+    public void setSize(BigDecimal size) {
+        this.size = size;
+    }
+
+    public ExpiryPeriod getExpiryPeriod() {
+        return expiryPeriod;
+    }
+
+    public void setExpiryPeriod(ExpiryPeriod expiryPeriod) {
+        this.expiryPeriod = expiryPeriod;
+    }
 }

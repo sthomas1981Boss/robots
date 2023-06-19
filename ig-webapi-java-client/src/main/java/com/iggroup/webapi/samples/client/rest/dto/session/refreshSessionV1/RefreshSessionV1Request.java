@@ -7,5 +7,5 @@ import lombok.Data;
 @Builder
 public class RefreshSessionV1Request {
 
-   private String refresh_token;
+    private String refresh_token;
 }

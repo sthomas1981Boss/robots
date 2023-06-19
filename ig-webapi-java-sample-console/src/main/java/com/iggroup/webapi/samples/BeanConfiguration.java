@@ -11,15 +11,15 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource(value = "application-spring-context.xml")
 public class BeanConfiguration {
 
-   @Bean
-   public HttpClient httpClient() {
-      return HttpClients.createDefault();
-   }
+    @Bean
+    public HttpClient httpClient() {
+        return HttpClients.createDefault();
+    }
 
-   @Bean
-   @Qualifier(value = "ig.api.domain.URL")
-   public String igApiDomainURL() {
-      return PropertiesUtil.getProperty("environment.URL");
-   }
+    @Bean
+    @Qualifier(value = "ig.api.domain.URL")
+    public String igApiDomainURL() {
+        return PropertiesUtil.getProperty("environment.URL");
+    }
 
 }

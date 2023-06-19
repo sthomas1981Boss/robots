@@ -8,11 +8,16 @@ Delete watchlist response
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DeleteWatchlistV1Response {
 
-/*
-Status
-*/
-private Status status;
+    /*
+    Status
+    */
+    private Status status;
 
-public Status getStatus() { return status; }
-public void setStatus(Status status) { this.status=status; }
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }

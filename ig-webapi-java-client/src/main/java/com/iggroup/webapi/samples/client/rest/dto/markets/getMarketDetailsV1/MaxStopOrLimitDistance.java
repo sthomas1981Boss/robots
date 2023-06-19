@@ -8,18 +8,29 @@ Dealing rule
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MaxStopOrLimitDistance {
 
-/*
-Unit
-*/
-private DealingRuleUnit unit;
+    /*
+    Unit
+    */
+    private DealingRuleUnit unit;
 
-/*
-Value
-*/
-private Double value;
+    /*
+    Value
+    */
+    private Double value;
 
-public DealingRuleUnit getUnit() { return unit; }
-public void setUnit(DealingRuleUnit unit) { this.unit=unit; }
-public Double getValue() { return value; }
-public void setValue(Double value) { this.value=value; }
+    public DealingRuleUnit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(DealingRuleUnit unit) {
+        this.unit = unit;
+    }
+
+    public Double getValue() {
+        return value;
+    }
+
+    public void setValue(Double value) {
+        this.value = value;
+    }
 }

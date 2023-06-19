@@ -4,15 +4,20 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /*
 
-*/
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DeleteWatchlistMarketV1Response {
 
-/*
-Status
-*/
-private Status status;
+    /*
+    Status
+    */
+    private Status status;
 
-public Status getStatus() { return status; }
-public void setStatus(Status status) { this.status=status; }
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }

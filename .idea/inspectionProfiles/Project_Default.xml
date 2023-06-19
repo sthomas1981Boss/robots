@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="com.fasterxml.jackson.core:jackson-core" />
+          <option value="org.apache.httpcomponents:httpclient" />
+          <option value="org.slf4j:jcl-over-slf4j" />
+          <option value="org.slf4j:log4j-over-slf4j" />
+          <option value="org.slf4j:slf4j-api" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

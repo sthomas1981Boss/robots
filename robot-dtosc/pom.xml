@@ -1,121 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-   <parent>
-      <groupId>com.robots</groupId>
-      <artifactId>robots</artifactId>
-      <version>1.0.0</version>
-   </parent>
+    <parent>
+        <groupId>com.robots</groupId>
+        <artifactId>robots</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-   <name>IRobot dtosc</name>
+    <name>IRobot dtosc</name>
 
-   <artifactId>robot-dtosc</artifactId>
+    <artifactId>robot-dtosc</artifactId>
 
-   <properties>
-      <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
-   </properties>
+    <repositories>
+        <repository>
+            <id>local-maven-repo</id>
+            <url>file://${project.basedir}/maven-repo</url>
+        </repository>
+    </repositories>
 
-   <dependencyManagement>
-      <dependencies>
+    <properties>
+        <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
+    </properties>
 
-         <dependency>
-            <!-- Import dependency management from Spring Boot -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>ig-webapi-java-client</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
             <version>${spring-boot.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-         </dependency>
+        </dependency>
 
-      </dependencies>
-   </dependencyManagement>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
 
-   <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
 
-      <dependency>
-         <groupId>${project.parent.groupId}</groupId>
-         <artifactId>ig-webapi-java-client</artifactId>
-         <version>${project.parent.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
 
-      <dependency>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter</artifactId>
-         <version>${spring-boot.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
 
-      <dependency>
-         <groupId>org.apache.httpcomponents</groupId>
-         <artifactId>httpclient</artifactId>
-      </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ta4j</groupId>
+            <artifactId>ta4j-core</artifactId>
+            <version>0.15</version>
+        </dependency>
+        <dependency>
+            <groupId>com.robots</groupId>
+            <artifactId>com</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
 
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>slf4j-api</artifactId>
-      </dependency>
+    </dependencies>
 
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>jcl-over-slf4j</artifactId>
-      </dependency>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.google.code.maven-svn-revision-number-plugin</groupId>
+                    <artifactId>svn-revision-number-maven-plugin</artifactId>
+                    <version>1.13</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.tmatesoft.svnkit</groupId>
+                            <artifactId>svnkit</artifactId>
+                            <version>1.8.5</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
 
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>log4j-over-slf4j</artifactId>
-      </dependency>
-
-      <dependency>
-         <groupId>ch.qos.logback</groupId>
-         <artifactId>logback-classic</artifactId>
-         <version>1.2.0</version>
-      </dependency>
-
-   </dependencies>
-
-   <build>
-      <pluginManagement>
-         <plugins>
+        <plugins>
+            <!-- Create a spring boot executable app -->
             <plugin>
-               <groupId>com.google.code.maven-svn-revision-number-plugin</groupId>
-               <artifactId>svn-revision-number-maven-plugin</artifactId>
-               <version>1.13</version>
-               <dependencies>
-                  <dependency>
-                     <groupId>org.tmatesoft.svnkit</groupId>
-                     <artifactId>svnkit</artifactId>
-                     <version>1.8.5</version>
-                  </dependency>
-               </dependencies>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
             </plugin>
-         </plugins>
-      </pluginManagement>
 
-      <plugins>
-         <!-- Create a spring boot executable app -->
-         <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>${spring-boot.version}</version>
-         </plugin>
+            <!-- Create samples app sources -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-         <!-- Create samples app sources -->
-         <plugin>
-            <artifactId>maven-source-plugin</artifactId>
-            <executions>
-               <execution>
-                  <id>attach-sources</id>
-                  <goals>
-                     <goal>jar</goal>
-                  </goals>
-               </execution>
-            </executions>
-         </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>de.sjwimmer.ta4j-charting</groupId>
+                            <artifactId>ta4j-charting</artifactId>
+                            <version>0.2-SNAPSHOT</version>
+                            <packaging>jar</packaging>
+                            <file>maven-repo/com/taj-charting/lib/0.2/0.2.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
 
-      </plugins>
-
-   </build>
+    </build>
 
 </project>

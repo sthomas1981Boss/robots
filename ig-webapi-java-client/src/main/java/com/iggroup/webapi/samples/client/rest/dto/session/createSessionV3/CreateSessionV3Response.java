@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class CreateSessionV3Response {
-private AccountType accountType;
+    private AccountType accountType;
     private String clientId;
     private String accountId;
     private int timezoneOffset;
